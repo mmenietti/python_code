@@ -35,7 +35,7 @@ class ParsingError(Exception):
         return return_string
         
 #------------------------------------------------------------------------------    
-def parse_table_data(column_values, idx_int=None, idx_float=None, idx_date=None, idx_decimal=None, idx_boolean=None, boolean_string_values=None ):
+def parse_table_data(column_values, idx_int=None, idx_float=None, idx_percentage=None, idx_date=None, idx_decimal=None, idx_boolean=None, boolean_string_values=None ):
     
     # If no boolean strings given use the default text for printing booleans
     if (not boolean_string_values) and (idx_boolean):
@@ -57,6 +57,14 @@ def parse_table_data(column_values, idx_int=None, idx_float=None, idx_date=None,
             for idx in idx_float:
                 try:
                     column_values[idx][idx_row] = try_float_parse(column_values[idx][idx_row])
+                except ParsingError as parse_error:                    
+                    parse_error.idx_col = idx
+                    parse_error.idx_row = idx_row
+                    raise parse_error
+        if idx_percentage:
+            for idx in idx_percentage:
+                try:
+                    column_values[idx][idx_row] = try_percentage_parse(column_values[idx][idx_row])
                 except ParsingError as parse_error:                    
                     parse_error.idx_col = idx
                     parse_error.idx_row = idx_row
@@ -105,7 +113,20 @@ def try_float_parse(s):
          return float(s)
     except ValueError: 
         return None
-    
+
+#------------------------------------------------------------------------------  
+def try_percentage_parse(s):
+    s = s.strip()
+    if s.endswith('%'):
+        s = s.replace('%', '')
+        s = try_float_parse(s)
+        if s:
+            return s / 100.0
+        else:
+            return None
+    else:
+        return None
+
 #------------------------------------------------------------------------------  
 def try_decimal_parse(s):
     try:

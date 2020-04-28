@@ -15,8 +15,24 @@ def insert_into_db(column_data, column_names, db_cursor, db_table_name, db_schem
     sql_parameters = 'Values(' + '?,'*(n_columns-1) + '?)'
 
     sql_full_command = sql_commands + sql_variables + sql_parameters
-    
+    print(sql_full_command)
     db_cursor.executemany(sql_full_command, insert_data)
+    db_cursor.commit()
+
+#------------------------------------------------------------------------------    
+def insert_tuples_into_db(tuple_data, column_names, db_cursor, db_table_name, db_schema_name, db_name):
+    """Insert 'tuple_data' into database table."""
+    n_columns = len(tuple_data[0])
+
+    db_path =  db_name + '.' + db_schema_name + '.' + db_table_name
+
+    sql_commands = 'insert into ' + db_path
+    sql_variables = '(' + ','.join(column_names) + ')'
+    sql_parameters = 'Values(' + '?,'*(n_columns-1) + '?)'
+
+    sql_full_command = sql_commands + sql_variables + sql_parameters
+    
+    db_cursor.executemany(sql_full_command, tuple_data)
     db_cursor.commit()
 
 #------------------------------------------------------------------------------    

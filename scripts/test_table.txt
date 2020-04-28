@@ -1,0 +1,6 @@
+coefficient_label,coefficent_name,coefficient,std_err,p_value,t_stat
+"A Coefficient",a_coefficient,1,1.5,0.01,10
+"B Coefficient",b_coefficient,2,2.5,0.02,20
+"C Coefficient",c_coefficient,3,3.5,0.03,30
+"D Coefficient",d_coefficient,4,4.5,0.04,40
+"E Coefficient",e_coefficient,5,5.5,0.05,50
