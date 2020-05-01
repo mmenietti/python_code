@@ -1,0 +1,30 @@
+{
+  "coefficient_values": [
+    0.498998916494887,
+    -0.172346403658942,
+    0.323646707530312
+  ],
+  "coefficient_names": [
+    "(Intercept)",
+    "migratedTRUE",
+    "migrated_to_pakistanTRUE"
+  ],
+  "n_observations": 1808,
+  "adj_r_squared": 0.0549229773919063,
+  "coefficient_t_value": [
+    19.0407366207873,
+    -5.77272706882414,
+    9.26095013776026
+  ],
+  "coefficient_std_err": [
+    0.0262069123917252,
+    0.0298552835781387,
+    0.0349474624866715
+  ],
+  "coefficient_p_value": [
+    7.84169849078493e-81,
+    7.79987275296149e-9,
+    2.0262102738758e-20
+  ],
+  "dependent_variable": "non_negative_view_on_partition"
+}

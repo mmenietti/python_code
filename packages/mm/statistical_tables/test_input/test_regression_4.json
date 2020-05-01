@@ -1,0 +1,50 @@
+{
+  "coefficient_values": [
+    0.512526909157716,
+    -0.171535359671603,
+    0.349646298803184,
+    -0.0148242004804742,
+    -0.0250161341435608,
+    -0.0467888232604739,
+    -0.0347690587751833
+  ],
+  "coefficient_names": [
+    "(Intercept)",
+    "migratedTRUE",
+    "migrated_to_pakistanTRUE",
+    "ses_before_unorderedPoor",
+    "ses_before_unorderedLower Middle Class",
+    "ses_before_unorderedUpper Middle Class",
+    "ses_before_unorderedWealthy"
+  ],
+  "n_observations": 1655,
+  "adj_r_squared": 0.0579676027518901,
+  "coefficient_t_value": [
+    16.9981764815474,
+    -5.40460603460097,
+    9.6330596078877,
+    -0.238310388740654,
+    -0.80896842755444,
+    -1.67766485397812,
+    -0.749469463939937
+  ],
+  "coefficient_std_err": [
+    0.0301518759799969,
+    0.0317387351776267,
+    0.0362964948869296,
+    0.0622054311556131,
+    0.0309234987318184,
+    0.0278892552046537,
+    0.0463915615619661
+  ],
+  "coefficient_p_value": [
+    8.47143797436864e-65,
+    6.49509916769921e-8,
+    5.79769674185971e-22,
+    0.811640364386365,
+    0.418533307077686,
+    0.0934125442798625,
+    0.453574296851289
+  ],
+  "dependent_variable": "non_negative_view_on_partition"
+}

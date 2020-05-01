@@ -1,0 +1,25 @@
+{
+  "coefficient_values": [
+    0.450213382784649,
+    -0.0286714716385029
+  ],
+  "coefficient_names": [
+    "(Intercept)",
+    "migratedTRUE"
+  ],
+  "n_observations": 1816,
+  "adj_r_squared": 0.0186662999501105,
+  "coefficient_t_value": [
+    15.2686634254316,
+    -1.06019917533853
+  ],
+  "coefficient_std_err": [
+    0.0294861030229255,
+    0.0270434766461197
+  ],
+  "coefficient_p_value": [
+    1.23682193833912e-52,
+    0.289053996210987
+  ],
+  "dependent_variable": "non_negative_view_on_partition"
+}
